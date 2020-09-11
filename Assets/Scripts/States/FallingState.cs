@@ -4,30 +4,24 @@ using UnityEngine;
 
 public class FallingState : PlayerState
 {
-
-    bool hasDoubleJumped;
-    public FallingState()
-    {
-        hasDoubleJumped = false;
-    }
-
-    public FallingState(bool hasDoubleJumped)
-    {
-        this.hasDoubleJumped = hasDoubleJumped;
-    }
     public void handleInput(PlayerController player)
     {
         //Debug.Log("Falling state");
         if (player.isGrounded)
         {
             player.state = new IdleState();
+            player.hasDoubleJumped = false;
         }
-
-        if (Input.GetKeyDown(KeyCode.Z) && !hasDoubleJumped)
+        if (Input.GetKeyDown(KeyCode.Z) && !player.hasDoubleJumped)
         {
-            player.state = new JumpingState(true);
+            player.state = new JumpingState();
+            player.hasDoubleJumped = true;
         }
-
+        if (Input.GetKeyDown(KeyCode.V) && player.canDash())
+        {
+            player.state = new DashState();
+            player.resetDashCooldown();
+        }
         Vector3 vector = new Vector3();
         if (Input.GetKey(KeyCode.RightArrow))
         {

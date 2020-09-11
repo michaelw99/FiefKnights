@@ -11,9 +11,10 @@ public class RunningState : PlayerState
         {
             player.state = new JumpingState();
             player.isGrounded = false;
-        } else if (Input.GetKeyDown(KeyCode.V))
+        } else if (Input.GetKeyDown(KeyCode.V) && player.canDash())
         {
             player.state = new DashState();
+            player.resetDashCooldown();
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {

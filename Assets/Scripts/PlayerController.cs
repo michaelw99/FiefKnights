@@ -6,9 +6,12 @@ public class PlayerController : MonoBehaviour
 {
     public float MOVE_SPEED = 1500f;
     public float JUMP_SPEED = 4000f;
+    public float DASH_COOLDOWN = 0.8f;
 
     public bool isGrounded = true;
     public bool isFacingRight = true;
+    public bool hasDoubleJumped = false;
+    public float currDashCooldown = 0f;
 
     public PlayerState state;
     public Rigidbody2D rb;
@@ -38,10 +41,22 @@ public class PlayerController : MonoBehaviour
             scale.x *= -1;
             gameObject.transform.localScale = scale;
         }
+
+        currDashCooldown -= Time.deltaTime;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         isGrounded = true;
+    }
+
+    public bool canDash()
+    {
+        return currDashCooldown <= 0;
+    }
+
+    public void resetDashCooldown()
+    {
+        currDashCooldown = DASH_COOLDOWN;
     }
 }

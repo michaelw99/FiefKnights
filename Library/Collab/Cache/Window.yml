@@ -14,13 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Scenes/SampleScene.unity
     - Assets/Scripts/PlayerController.cs
+    - Assets/Scripts/States/DashState.cs
+    - Assets/Scripts/States/FallingState.cs
     - Assets/Scripts/States/IdleState.cs
+    - Assets/Scripts/States/JumpingState.cs
     - Assets/Scripts/States/RunningState.cs
     - 
-    m_Values: 0101010101
-  RevisionSummary: basic states
+    m_Values: 00000000000000
+  RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0

@@ -11,7 +11,10 @@ public class DashState : PlayerState
     {
         if (dashTime <= 0f)
         {
-            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
+            if (!player.isGrounded)
+            {
+                player.state = new FallingState();
+            } else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
             {
                 player.state = new RunningState();
             }
