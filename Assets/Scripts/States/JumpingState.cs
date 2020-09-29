@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class JumpingState : PlayerState
 {
-    private float jumpTime = 0.5f;
-    public void handleInput(PlayerController player)
+    private float jumpTime = 0.3f;
+
+    public JumpingState()
     {
         Debug.Log("Jumping state");
+    }
+
+    public void handleInput(PlayerController player)
+    {
         Vector3 vector = new Vector3();
         if (Input.GetKeyUp(KeyCode.Z) || jumpTime <= 0)
         {
@@ -28,12 +33,13 @@ public class JumpingState : PlayerState
         }
         if (Input.GetKey(KeyCode.Z))
         {
-            vector += Vector3.up * player.MOVE_SPEED * Time.deltaTime;
-            player.rb.velocity = vector;
+            vector += Vector3.up * player.JUMP_SPEED * Time.deltaTime;
+            //player.rb.velocity = vector;
+            player.rb.AddForce(vector);
         } 
     }
 
-    public void update()
+    public void update(PlayerController player)
     {
         jumpTime -= Time.deltaTime;
     }

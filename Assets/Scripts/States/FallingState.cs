@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class FallingState : PlayerState
 {
+
+    public FallingState()
+    {
+        Debug.Log("Falling state");
+    }
+
     public void handleInput(PlayerController player)
     {
-        //Debug.Log("Falling state");
         if (player.isGrounded)
         {
             player.state = new IdleState();
@@ -31,11 +36,12 @@ public class FallingState : PlayerState
         {
             vector += Vector3.left * player.MOVE_SPEED * Time.deltaTime;
         }
-        vector += Vector3.down * player.MOVE_SPEED * Time.deltaTime;
-        player.rb.velocity = vector;
+        vector += Vector3.down * player.JUMP_SPEED * Time.deltaTime;
+        //player.rb.velocity = vector;
+        player.rb.AddForce(vector);
     }
 
-    public void update()
+    public void update(PlayerController player)
     {
 
     }

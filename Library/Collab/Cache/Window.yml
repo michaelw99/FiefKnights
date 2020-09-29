@@ -14,14 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Scripts/PlayerController.cs
-    - Assets/Scripts/States/DashState.cs
-    - Assets/Scripts/States/FallingState.cs
-    - Assets/Scripts/States/IdleState.cs
-    - Assets/Scripts/States/JumpingState.cs
-    - Assets/Scripts/States/RunningState.cs
+    - Assets/Scenes/SampleScene.unity
+    - Assets/Scripts/BreakGauge.cs
+    - Assets/Scripts/EnemyController.cs
+    - Assets/Scripts/EnemyStatsUIController.cs
+    - Assets/Scripts/EnemyStatsUIController.cs.meta
+    - Assets/Scripts/States/GroundedState.cs
+    - Assets/Scripts/States/GroundedState.cs.meta
     - 
-    m_Values: 00000000000000
+    m_Values: 0000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class DashState : PlayerState
 {
-    private float dashTime = 0.2f;
-    private float DASH_SPEED = 10000f;
+    private float stateTime = 0f;
+    private float dashStopTime = 0.2f;
+    private float velocityStopTime = 0.18f;
+
+    public DashState()
+    {
+        Debug.Log("dash state");
+    }
 
     public void handleInput(PlayerController player)
     {
-        if (dashTime <= 0f)
+        if (stateTime >= dashStopTime)
         {
             if (!player.isGrounded)
             {
@@ -22,21 +28,27 @@ public class DashState : PlayerState
             {
                 player.state = new IdleState();
             }
-        } else
+        }
+        else if (stateTime >= velocityStopTime) {
+            player.rb.velocity = Vector3.zero;
+        }
+        else
         {
             if (player.isFacingRight)
             {
-                player.rb.velocity = (Vector3.right * DASH_SPEED * Time.deltaTime);
+                player.rb.velocity = (Vector3.right * player.DASH_SPEED * Time.deltaTime);
+                //player.rb.AddForce(Vector3.right * player.DASH_SPEED * Time.deltaTime, ForceMode2D.Impulse);
             } else
             {
-                player.rb.velocity = (Vector3.left * DASH_SPEED * Time.deltaTime);
+                player.rb.velocity = (Vector3.left * player.DASH_SPEED * Time.deltaTime);
+                //player.rb.AddForce(Vector3.left * player.DASH_SPEED * Time.deltaTime, ForceMode2D.Impulse);
             }
-            
+
         }
     }
 
-    public void update()
+    public void update(PlayerController player)
     {
-        dashTime -= Time.deltaTime;
+        stateTime += Time.deltaTime;
     }
 }

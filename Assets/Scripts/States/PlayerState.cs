@@ -6,5 +6,6 @@ public interface PlayerState
 {
     void handleInput(PlayerController player);
 
-    void update();
+    void update(PlayerController player);
+
 }

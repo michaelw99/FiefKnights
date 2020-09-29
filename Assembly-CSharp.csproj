@@ -52,13 +52,31 @@
     <UnityVersion>2020.1.4f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\States\CombatStates\LLLH_State.cs" />
+    <Compile Include="Assets\Scripts\BreakGauge.cs" />
+    <Compile Include="Assets\Scripts\States\CombatStates\LLLL_State.cs" />
+    <Compile Include="Assets\Scripts\States\CombatStates\HHH_State.cs" />
+    <Compile Include="Assets\Scripts\BufferedInputListener.cs" />
     <Compile Include="Assets\Scripts\States\PlayerState.cs" />
+    <Compile Include="Assets\Scripts\EnemyStats.cs" />
+    <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\States\FallingState.cs" />
+    <Compile Include="Assets\Scripts\States\GroundedState.cs" />
+    <Compile Include="Assets\Scripts\States\CombatStates\H_State.cs" />
+    <Compile Include="Assets\Scripts\States\CombatStates\LeapStrike_State.cs" />
+    <Compile Include="Assets\Scripts\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\States\CombatStates\LLL_State.cs" />
+    <Compile Include="Assets\Scripts\States\CombatStates\HH_State.cs" />
+    <Compile Include="Assets\Scripts\States\CombatStates\SliceNDice_State.cs" />
     <Compile Include="Assets\Scripts\States\IdleState.cs" />
+    <Compile Include="Assets\Scripts\States\CombatStates\L_State.cs" />
+    <Compile Include="Assets\Scripts\States\CombatStates\LL_State.cs" />
     <Compile Include="Assets\Scripts\States\JumpingState.cs" />
+    <Compile Include="Assets\Scripts\HitBoxController.cs" />
+    <Compile Include="Assets\Scripts\States\DashState.cs" />
     <Compile Include="Assets\Scripts\States\RunningState.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\States\DashState.cs" />
+    <Compile Include="Assets\Scripts\EnemyStatsUIController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
