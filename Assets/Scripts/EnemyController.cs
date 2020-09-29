@@ -29,4 +29,6 @@ public class EnemyController : MonoBehaviour
         stats.takeDamage(damage);
         breakGauge.increaseBreak(damage);
     }
+
+
 }

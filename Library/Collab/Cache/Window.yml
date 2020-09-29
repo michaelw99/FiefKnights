@@ -21,8 +21,9 @@ MonoBehaviour:
     - Assets/Scripts/EnemyStatsUIController.cs.meta
     - Assets/Scripts/States/GroundedState.cs
     - Assets/Scripts/States/GroundedState.cs.meta
+    - ProjectSettings/ProjectVersion.txt
     - 
-    m_Values: 0000000000000000
+    m_Values: 000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
