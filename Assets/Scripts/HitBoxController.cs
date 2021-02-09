@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Bolt;
+using Ludiq;
 
 public class HitBoxController : MonoBehaviour
 {
@@ -20,9 +22,14 @@ public class HitBoxController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        if (collider.gameObject.layer == LayerMask.NameToLayer("Breakable"))
         {
-            collider.gameObject.GetComponent<EnemyController>().takeDamage(damage);
+            collider.gameObject.GetComponent<BreakableWallController>().takeDamage();
+        }
+        if (collider.gameObject.layer == LayerMask.NameToLayer("OneWayBreakable"))
+        {
+            collider.gameObject.GetComponent<OneWayBreakableWallController>().takeDamage();
         }
     }
+
 }

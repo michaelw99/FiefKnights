@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - PlayerHitBox
+  - EnemyHitBox
+  - WaterSpout
+  - SlideBlock
   layers:
   - Default
   - TransparentFX
@@ -15,12 +20,12 @@ TagManager:
   - 
   - PlayerHitBox
   - Enemy
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Breakable
+  - Ground
+  - Wall
+  - Ceiling
+  - OneWayBreakable
   - 
   - 
   - 

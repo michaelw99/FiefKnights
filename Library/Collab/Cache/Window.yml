@@ -14,16 +14,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Scenes/SampleScene.unity
-    - Assets/Scripts/BreakGauge.cs
-    - Assets/Scripts/EnemyController.cs
-    - Assets/Scripts/EnemyStatsUIController.cs
-    - Assets/Scripts/EnemyStatsUIController.cs.meta
-    - Assets/Scripts/States/GroundedState.cs
-    - Assets/Scripts/States/GroundedState.cs.meta
-    - ProjectSettings/ProjectVersion.txt
+    - Assets/Resources/MapStuff/nextLevelPoint.prefab
+    - Assets/Resources/MapStuff/nextLevelPoint.prefab.meta
+    - Assets/Resources/MapStuff/waterspout2.prefab
+    - Assets/Resources/MapStuff/waterspout2.prefab.meta
+    - Assets/Resources/MenuCanvas.prefab
+    - Assets/Resources/MenuCanvas.prefab.meta
+    - Assets/Resources/_SaveManager.prefab
+    - Assets/Resources/_SaveManager.prefab.meta
+    - Assets/Resources/_SceneLoader.prefab
+    - Assets/Resources/_SceneLoader.prefab.meta
+    - Assets/Scenes/Arboretum0.unity
+    - Assets/Scenes/Arboretum0.unity.meta
+    - Assets/Scenes/Arboretum1.unity
+    - Assets/Scenes/Arboretum2.unity
+    - Assets/Scenes/Arboretum3.unity
+    - Assets/Scenes/Arboretum4.unity
+    - Assets/Scenes/Arboretum5.unity
+    - Assets/Scenes/test.unity
+    - Assets/Scripts/Map/NextLevelPointController.cs
+    - Assets/Scripts/Map/NextLevelPointController.cs.meta
+    - Assets/Scripts/Map/WaterSpoutController2.cs
+    - Assets/Scripts/Map/WaterSpoutController2.cs.meta
+    - Assets/Scripts/Save/GameLoader.cs
+    - Assets/Scripts/Save/GameLoader.cs.meta
+    - Assets/Scripts/Save/GameStateManager.cs
+    - Assets/Scripts/Save/GameStateManager.cs.meta
+    - Assets/Scripts/Save/PlayerStats.cs
+    - Assets/Scripts/Save/PlayerStats.cs.meta
+    - Assets/Scripts/Save/PlayerStatsSave.cs
+    - Assets/Scripts/Save/PlayerStatsSave.cs.meta
+    - Assets/Scripts/Save/RoomSave.cs
+    - Assets/Scripts/Save/RoomSave.cs.meta
+    - Assets/Scripts/Save/RoomStats.cs
+    - Assets/Scripts/Save/RoomStats.cs.meta
+    - Assets/Scripts/Save/SaveManager.cs
+    - Assets/Scripts/Save/SceneLoader.cs
+    - Assets/Scripts/Save/SceneLoader.cs.meta
+    - Assets/Scripts/Save/SerializableTypes.cs
+    - Assets/Scripts/Save/SerializableTypes.cs.meta
+    - Assets/Scripts/Save/TempDefaultSaveScript.cs
+    - Assets/Scripts/Save/TempDefaultSaveScript.cs.meta
+    - Assets/Scripts/Save/TotalRoomSave.cs
+    - Assets/Scripts/Save/TotalRoomSave.cs.meta
+    - Assets/Scripts/SmoothCamera.cs
+    - ProjectSettings/EditorBuildSettings.asset
     - 
-    m_Values: 000000000000000000
+    m_Values: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

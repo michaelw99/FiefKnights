@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Arboretum0.unity
+    guid: f644b3389bebc894dbbee258676251a9
+  - enabled: 1
+    path: Assets/Scenes/Arboretum1.unity
+    guid: 3ea3dfe624874534c9e2a41b1dbeebb9
+  - enabled: 1
+    path: Assets/Scenes/Arboretum2.unity
+    guid: 6e01b4ce83a045645b800733b81d15b1
+  - enabled: 1
+    path: Assets/Scenes/Arboretum3.unity
+    guid: be52439e7b8484145a7cd0cacd5e5162
+  - enabled: 1
+    path: Assets/Scenes/Arboretum4.unity
+    guid: c21b32ac1e5dde245be44a893ca484cb
+  - enabled: 1
+    path: Assets/Scenes/Arboretum5.unity
+    guid: 3a1d35785ab61e648b516dd10bb3c787
   m_configObjects: {}

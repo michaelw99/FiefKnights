@@ -7,40 +7,49 @@ public class RunningState : GroundedState
     
     public RunningState()
     {
-        Debug.Log("running state");
+        // Debug.Log("running state");
     }
 
     public override void handleInput(PlayerController player)
     {
         handleSkillInput(player);
+        checkForFinisher(player);
         // Combat states
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(SettingsInputManager.SIM.lightattack))
         {
             // light attack state L
-            player.state = new L_State();
+            player.state = player.currentMask.getLState();
         }
-        else if (Input.GetKeyDown(KeyCode.C))
+        else if (Input.GetKeyDown(SettingsInputManager.SIM.heavyattack))
         {
             // heavy attack state H
-            player.state = new H_State();
+            player.state = player.currentMask.getHState();
         }
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(SettingsInputManager.SIM.jump))
         {
             player.state = new JumpingState();
-        } else if (Input.GetKeyDown(KeyCode.V) && player.canDash())
+        } else if (Input.GetKeyDown(SettingsInputManager.SIM.dash) && player.canDash())
         {
             player.state = new DashState();
             player.resetDashCooldown();
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(SettingsInputManager.SIM.right))
         {
             //player.rb.velocity = (Vector3.right * player.MOVE_SPEED * Time.deltaTime);
             player.rb.AddForce(Vector3.right * player.MOVE_SPEED * Time.deltaTime);
-        } else if (Input.GetKey(KeyCode.LeftArrow))
+            if (!player.isFacingRight)
+            {
+                player.flipDirection();
+            }
+        } else if (Input.GetKey(SettingsInputManager.SIM.left))
         {
             //player.rb.velocity = (Vector3.left * player.MOVE_SPEED * Time.deltaTime);
             player.rb.AddForce(Vector3.left * player.MOVE_SPEED * Time.deltaTime);
+            if (player.isFacingRight)
+            {
+                player.flipDirection();
+            }
         } else
         {
             player.state = new IdleState();
